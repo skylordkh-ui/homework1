@@ -77,7 +77,7 @@ function App() {
           <div className="page-view animate-fade-in">
             <section className="hero-section">
               <div className="hero-badge">សួស្ដី</div>
-              <h1 className="hero-title">Sursdey  MAY MAY</h1>
+              <h1 className="hero-title">Sursdey  MAY MAY TEAM CG</h1>
               <p className="hero-subtitle">
                 website nis ai tver oy mah  plet te tae kuy merl oy yol yu sahav hx yol tix tix tt
               </p>
