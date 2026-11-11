@@ -1,0 +1,934 @@
+/* Page Wrapper */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vintage Header / Navbar */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247, 243, 235, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 2px solid #3d352c;
+  padding: 0 24px;
+  box-shadow: 0 4px 14px rgba(43, 38, 32, 0.06);
+}
+
+.navbar-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #9c4125;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(156, 65, 37, 0.2);
+}
+
+.brand-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2b2620;
+  letter-spacing: 2px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ede6d8;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #d4c8b2;
+}
+
+.nav-btn {
+  background: transparent;
+  color: #5c5245;
+  border: none;
+  outline: none;
+  padding: 7px 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: #2b2620;
+}
+
+.nav-btn.active {
+  background-color: #3d352c;
+  color: #f7f3eb;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Content Container */
+.content-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px 70px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Page View Animation */
+.page-view {
+  width: 100%;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vintage Hero Section (Home page) */
+.hero-section {
+  background-color: #fbf9f4;
+  border: 2px solid #3d352c;
+  border-radius: 12px;
+  padding: 70px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 6px 6px 0px #3d352c;
+  margin-bottom: 36px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid #d4c8b2;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #ede6d8;
+  color: #8c381f;
+  border: 1px solid #c9bc9e;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2b2620;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+
+.hero-subtitle {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #635849;
+  max-width: 560px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.primary-btn {
+  background: #3d352c;
+  color: #f7f3eb;
+  border: 1.5px solid #2b2620;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0px #2b2620;
+}
+
+.primary-btn:hover {
+  background: #8c381f;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #2b2620;
+}
+
+.secondary-btn {
+  background: #ede6d8;
+  color: #2b2620;
+  border: 1.5px solid #3d352c;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0px #3d352c;
+}
+
+.secondary-btn:hover {
+  background: #fdfcf9;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #3d352c;
+}
+
+/* Teaser Grid (Home page) */
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.teaser-card {
+  background-color: #fbf9f4;
+  border: 1.5px solid #3d352c;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 4px 4px 0px #3d352c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.teaser-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #3d352c;
+  border-color: #8c381f;
+}
+
+.teaser-icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.teaser-card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  color: #2b2620;
+  margin-bottom: 8px;
+}
+
+.teaser-card p {
+  font-size: 0.92rem;
+  color: #635849;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.teaser-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #8c381f;
+  letter-spacing: 1px;
+}
+
+/* Clean Cards (About, Services, Contact) */
+.clean-card {
+  background-color: #fbf9f4;
+  border: 1.5px solid #3d352c;
+  border-radius: 10px;
+  padding: 44px 38px;
+  box-shadow: 6px 6px 0px #3d352c;
+  position: relative;
+}
+
+.clean-card::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid #d4c8b2;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.card-badge {
+  display: inline-block;
+  background-color: #ede6d8;
+  color: #8c381f;
+  border: 1px solid #c9bc9e;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.card-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2b2620;
+  margin-bottom: 14px;
+}
+
+.card-text {
+  font-size: 1.05rem;
+  color: #453c31;
+  line-height: 1.75;
+}
+
+.vintage-divider {
+  width: 100%;
+  height: 1px;
+  background: #d4c8b2;
+  margin: 20px 0;
+  border-bottom: 1px dashed #c9bc9e;
+}
+
+/* Ledger Block (About page) */
+.ledger-block {
+  background: #ede6d8;
+  border: 1px solid #3d352c;
+  padding: 22px 24px;
+  border-radius: 6px;
+  margin-top: 24px;
+  box-shadow: 3px 3px 0px #3d352c;
+}
+
+.ledger-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.92rem;
+  color: #2b2620;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.ledger-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #453c31;
+}
+
+/* Services Grid (Services page) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.service-item {
+  background: #ede6d8;
+  border: 1px solid #3d352c;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0px #3d352c;
+}
+
+.service-number {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #8c381f;
+  margin-bottom: 6px;
+}
+
+.service-item h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  color: #2b2620;
+  margin-bottom: 8px;
+}
+
+.service-item p {
+  font-size: 0.9rem;
+  color: #635849;
+  line-height: 1.5;
+}
+
+/* Vintage Contact Form */
+.vintage-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+  max-width: 500px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2b2620;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #ede6d8;
+  border: 1.5px solid #3d352c;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  color: #2b2620;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #ffffff;
+  border-color: #8c381f;
+  box-shadow: 2px 2px 0px #3d352c;
+}
+
+.contact-success {
+  background: #ede6d8;
+  border: 1.5px solid #2e5939;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-success h4 {
+  font-family: 'Cinzel', serif;
+  color: #2e5939;
+  margin-bottom: 6px;
+}
+
+.contact-pill-list {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contact-pill {
+  background-color: #ede6d8;
+  border: 1px solid #3d352c;
+  padding: 7px 16px;
+  border-radius: 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.84rem;
+  color: #2b2620;
+  font-weight: 600;
+  box-shadow: 2px 2px 0px #3d352c;
+}
+
+/* Student ID Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8c381f;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b2620;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.section-desc {
+  font-style: italic;
+  font-size: 0.96rem;
+  color: #6e6252;
+}
+
+.card-center-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* =========================================================
+   CLEAN MINIMALIST PROFILE CARD STYLING
+========================================================= */
+.clean-profile-card {
+  width: 360px;
+  max-width: 100%;
+  background-color: #fdfbf7;
+  border: 1.5px solid #3d352c;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0px #3d352c;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.clean-profile-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 7px 7px 0px #3d352c;
+}
+
+/* Header */
+.card-top-header {
+  background-color: #3d352c;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #8c381f;
+}
+
+.card-university-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-crest {
+  width: 34px;
+  height: 34px;
+  background-color: #f7f3eb;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d4c8b2;
+}
+
+.card-header-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  margin: 0;
+  color: #f7f3eb;
+  font-family: 'Cinzel', serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.card-subtitle {
+  margin: 0;
+  color: #d4c8b2;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.72rem;
+}
+
+.student-badge {
+  background-color: rgba(247, 243, 235, 0.12);
+  border: 1px solid #d4c8b2;
+  color: #f7f3eb;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Main Body */
+.card-main-body {
+  padding: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo-wrapper {
+  width: 120px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid #3d352c;
+  background-color: #ede6d8;
+  box-shadow: 3px 3px 0px #3d352c;
+  margin-bottom: 16px;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.03) sepia(0.12);
+}
+
+.student-display-name {
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #2b2620;
+  letter-spacing: 0.8px;
+  margin: 0 0 2px 0;
+}
+
+.student-display-dept {
+  font-family: 'Cinzel', serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #8c381f;
+  letter-spacing: 1.2px;
+  margin: 0 0 20px 0;
+}
+
+/* Info Grid */
+.profile-info-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background-color: #f7f3eb;
+  border: 1px solid #d4c8b2;
+  border-radius: 8px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+  border-top: 1px dashed #d4c8b2;
+  padding-top: 8px;
+  margin-top: 2px;
+}
+
+.info-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #6e6252;
+  letter-spacing: 0.8px;
+}
+
+.info-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #2b2620;
+}
+
+.info-value.id-code {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: #8c381f;
+  letter-spacing: 1px;
+}
+
+.card-footer-strip {
+  width: 100%;
+  height: 5px;
+  background-color: #8c381f;
+  margin-top: auto;
+}
+
+/* Vintage PIN Lock Box */
+.pin-lock-card {
+  width: 370px;
+  max-width: 100%;
+  background-color: #fbf9f4;
+  border: 2px solid #3d352c;
+  border-radius: 12px;
+  padding: 40px 28px;
+  text-align: center;
+  box-shadow: 6px 6px 0px #3d352c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.pin-lock-card::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px solid #d4c8b2;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.lock-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  background-color: #ede6d8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border: 1.5px solid #3d352c;
+  box-shadow: 2px 2px 0px #3d352c;
+}
+
+.pin-lock-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2b2620;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.pin-lock-desc {
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #635849;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.pin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 1;
+}
+
+.pin-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.3rem;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 10px;
+  text-align: center;
+  border: 2px solid #3d352c;
+  border-radius: 6px;
+  background-color: #ede6d8;
+  color: #2b2620;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.pin-input:focus {
+  border-color: #8c381f;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 0px #3d352c;
+}
+
+.pin-input.input-error {
+  border-color: #b91c1c;
+  background-color: #fee2e2;
+}
+
+.unlock-btn {
+  background-color: #3d352c;
+  color: #f7f3eb;
+  border: 1.5px solid #2b2620;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0px #2b2620;
+}
+
+.unlock-btn:hover {
+  background-color: #8c381f;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #2b2620;
+}
+
+.error-text {
+  color: #b91c1c;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+/* Unlocked Profile Wrapper */
+.unlocked-profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.unlocked-top-bar {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.unlocked-status {
+  font-family: 'Cinzel', serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #2e5939;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.live-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: #2e5939;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(46, 89, 57, 0.25);
+}
+
+.relock-btn {
+  background-color: #ede6d8;
+  border: 1.5px solid #3d352c;
+  color: #3d352c;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px #3d352c;
+}
+
+.relock-btn:hover {
+  background-color: #8c381f;
+  color: #f7f3eb;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #3d352c;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  border-top: 2px solid #3d352c;
+  background-color: #ede6d8;
+  padding: 28px 20px;
+  text-align: center;
+  color: #635849;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+}
+
+/* Print Stylesheet for Card Export */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .id-card-face, .id-card-face * {
+    visibility: visible;
+  }
+  .id-flip-card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: none !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .navbar-content {
+    flex-direction: column;
+    height: auto;
+    padding: 14px 0;
+    gap: 12px;
+  }
+  .clean-card {
+    padding: 26px 20px;
+  }
+  .id-flip-card {
+    height: 590px;
+  }
+}

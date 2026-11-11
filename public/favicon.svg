@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Vintage Shield Crest Background -->
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d352c"/>
+      <stop offset="100%" stop-color="#2b2620"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Outer Shield -->
+  <path d="M32 4 L10 12 L10 28 C10 44 20 54 32 60 C44 54 54 44 54 28 L54 12 Z" 
+        fill="url(#shieldGrad)" 
+        stroke="#8c381f" 
+        stroke-width="3" />
+        
+  <!-- Inner Border -->
+  <path d="M32 9 L15 15 L15 28 C15 41 23 49 32 54 C41 49 49 41 49 28 L49 15 Z" 
+        fill="none" 
+        stroke="#d4c8b2" 
+        stroke-width="1.5" 
+        stroke-dasharray="3,2" />
+        
+  <!-- Academic / Tech Monogram 'D' -->
+  <text x="32" y="39" 
+        font-family="'Georgia', serif" 
+        font-size="28" 
+        font-weight="bold" 
+        fill="#f7f3eb" 
+        text-anchor="middle">D</text>
+        
+  <!-- Wax Seal Accent Star -->
+  <circle cx="32" cy="46" r="2.5" fill="#8c381f" />
+</svg>
